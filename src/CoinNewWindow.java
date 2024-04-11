@@ -3,7 +3,7 @@ import java.awt.*;
 
 public class CoinNewWindow{
 
-    public  JLabel backlabel;
+    public JLabel backlabel;
     public JFrame coinwindow;
     public int whitecoin , blackcoin , redcoin , bluecoin , greencoin;
     public JButton whitebutton , blackbutton , redbutton , bluebutton , greenbutton , submitbutton;
