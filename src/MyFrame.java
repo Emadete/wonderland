@@ -584,4 +584,14 @@ public class MyFrame extends JFrame{
 
     }
 
+    public void schangePlayerCoin2(int whitecoin ,  int blackcoin , int redcoin , int bluecoin , int greencoin){
+
+        spwhiteCount2.setText(String.valueOf(whitecoin));
+        spblackCount2.setText(String.valueOf(blackcoin));
+        spredCount2.setText(String.valueOf(redcoin));
+        spblueCount2.setText(String.valueOf(bluecoin));
+        spgreenCount2.setText(String.valueOf(greencoin));
+
+    }
+
 }
