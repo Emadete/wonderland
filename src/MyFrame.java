@@ -279,81 +279,95 @@ public class MyFrame extends JFrame{
         bcart11.setBounds(700,595,125,175);
         add(bcart11);
 
-        bcart12 = new JButton(cart12);
-        Cart12 = new Cart(1 , 2 , 0 , 0 , 0 , 0 , "Black" , cart12);
-        bcart12.setBounds(875,595,125,175);
-        add(bcart12);
-
-        bcart13 = new JButton(cart13);
-        Cart13 = new Cart(0 , 0 , 0 , 0 , 4 , 1 , "Black" , cart13);
-        bcart13.setBounds(1050,595,125,175);
-        add(bcart13);
-
-        bcart14 = new JButton(cart14);
-        Cart14 = new Cart(0 , 2 , 0 , 2 , 1 , 0 , "Blue" , cart14);
-        bcart14.setBounds(1225,595,125,175);
-        add(bcart14);
-
-        bcart15 = new JButton(cart15);
-        Cart15 = new Cart(0 , 0 , 0 , 3 , 0 , 0 , "Blue" , cart15);
-        bcart15.setBounds(700,595,125,175);
-        add(bcart15);
-
-        bcart16 = new JButton(cart16);
-        Cart16 = new Cart(4 , 0 , 0 , 0 , 0 , 1 , "Blue" , cart16);
-        bcart16.setBounds(875,595,125,175);
-        add(bcart16);
-
-        bcart17 = new JButton(cart17);
-        Cart17 = new Cart(0 , 0 , 2 , 0 , 1 , 0 , "Green" , cart17);
-        bcart17.setBounds(1050,595,125,175);
-        add(bcart17);
-
         bcart18 = new JButton(cart18);
         Cart18 = new Cart(2 , 0 , 0 , 2 , 1 , 0 , "Green" , cart18);
         bcart18.setBounds(1225,595,125,175);
         add(bcart18);
-
-        bcart19 = new JButton(cart19);
-        Cart19 = new Cart(0 , 0 , 0 , 4 , 0 , 1 , "Green" , cart19);
-        bcart19.setBounds(700,595,125,175);
-        add(bcart19);
-
-        bcart110 = new JButton(cart110);
-        Cart110 = new Cart(0 , 1 , 2 , 1 , 1 , 0 , "Red" , cart110);
-        bcart110.setBounds(875,595,125,175);
-        add(bcart110);
-
-        bcart111 = new JButton(cart111);
-        Cart111 = new Cart(0 , 1 , 0 , 0 , 2 , 0 , "Red" , cart111);
-        bcart111.setBounds(1050,595,125,175);
-        add(bcart111);
-
-        bcart112 = new JButton(cart112);
-        Cart112 = new Cart(0 , 0 , 4 , 0 , 0 , 1 , "Red" , cart112);
-        bcart112.setBounds(1225,595,125,175);
-        add(bcart112);
-
-        bcart113 = new JButton(cart113);
-        Cart113 = new Cart(2 , 0 , 0 , 1 , 0 , 0 , "White" , cart113);
-        bcart113.setBounds(700,595,125,175);
-        add(bcart113);
-
-        bcart114 = new JButton(cart114);
-        Cart114 = new Cart(0 , 0 , 0 , 2 , 2 , 0 , "White" , cart114);
-        bcart114.setBounds(875,595,125,175);
-        add(bcart114);
 
         bcart115 = new JButton(cart115);
         Cart115 = new Cart(0 , 4 , 0 , 0 , 0 , 1 , "White" , cart115);
         bcart115.setBounds(1050,595,125,175);
         add(bcart115);
 
+        bcart15 = new JButton(cart15);
+        Cart15 = new Cart(0 , 0 , 0 , 3 , 0 , 0 , "Blue" , cart15);
+        bcart15.setBounds(700,595,125,175);
+        add(bcart15);
+
+        bcart13 = new JButton(cart13);
+        Cart13 = new Cart(0 , 0 , 0 , 0 , 4 , 1 , "Black" , cart13);
+        bcart13.setBounds(1050,595,125,175);
+        add(bcart13);
+
+        bcart19 = new JButton(cart19);
+        Cart19 = new Cart(0 , 0 , 0 , 4 , 0 , 1 , "Green" , cart19);
+        bcart19.setBounds(700,595,125,175);
+        add(bcart19);
+
+        bcart14 = new JButton(cart14);
+        Cart14 = new Cart(0 , 2 , 0 , 2 , 0 , 0 , "Blue" , cart14);
+        bcart14.setBounds(1225,595,125,175);
+        add(bcart14);
+
+        bcart110 = new JButton(cart110);
+        Cart110 = new Cart(0 , 1 , 2 , 1 , 1 , 0 , "Red" , cart110);
+        bcart110.setBounds(875,595,125,175);
+        add(bcart110);
+
+        bcart16 = new JButton(cart16);
+        Cart16 = new Cart(4 , 0 , 0 , 0 , 0 , 1 , "Blue" , cart16);
+        bcart16.setBounds(875,595,125,175);
+        add(bcart16);
+
+        bcart113 = new JButton(cart113);
+        Cart113 = new Cart(2 , 0 , 0 , 1 , 0 , 0 , "White" , cart113);
+        bcart113.setBounds(700,595,125,175);
+        add(bcart113);
+
+        bcart17 = new JButton(cart17);
+        Cart17 = new Cart(0 , 0 , 2 , 0 , 1 , 0 , "Green" , cart17);
+        bcart17.setBounds(1050,595,125,175);
+        add(bcart17);
+
+        bcart111 = new JButton(cart111);
+        Cart111 = new Cart(0 , 1 , 0 , 0 , 2 , 0 , "Red" , cart111);
+        bcart111.setBounds(1050,595,125,175);
+        add(bcart111);
+
+        bcart12 = new JButton(cart12);
+        Cart12 = new Cart(1 , 2 , 0 , 0 , 0 , 0 , "Black" , cart12);
+        bcart12.setBounds(875,595,125,175);
+        add(bcart12);
+
+        bcart112 = new JButton(cart112);
+        Cart112 = new Cart(0 , 0 , 4 , 0 , 0 , 1 , "Red" , cart112);
+        bcart112.setBounds(1225,595,125,175);
+        add(bcart112);
+
+        bcart114 = new JButton(cart114);
+        Cart114 = new Cart(0 , 0 , 0 , 2 , 2 , 0 , "White" , cart114);
+        bcart114.setBounds(875,595,125,175);
+        add(bcart114);
+
+        bcart210 = new JButton(cart210);
+        Cart210 = new Cart(0 , 0 , 0 , 5 , 0 , 2 , "Red" , cart210);
+        bcart210.setBounds(875,395,125,175);
+        add(bcart210);
+
+        bcart25 = new JButton(cart25);
+        Cart25 = new Cart(0 , 0 , 5 , 0 , 3 , 2 , "Blue" , cart25);
+        bcart25.setBounds(700,395,125,175);
+        add(bcart25);
 
         bcart21 = new JButton(cart21);
         Cart21 = new Cart(3 , 5 , 0 , 0 , 0 , 2 , "Black" , cart21);
         bcart21.setBounds(700,395,125,175);
         add(bcart21);
+
+        bcart214 = new JButton(cart214);
+        Cart214 = new Cart(5 , 0 , 0 , 3 , 0 , 2 , "White" , cart214);
+        bcart214.setBounds(875,395,125,175);
+        add(bcart214);
 
         bcart22 = new JButton(cart22);
         Cart22 = new Cart(0 , 0 , 5 , 0 , 0 , 2 , "Black" , cart22);
@@ -365,45 +379,40 @@ public class MyFrame extends JFrame{
         bcart23.setBounds(1050,395,125,175);
         add(bcart23);
 
+        bcart215 = new JButton(cart215);
+        Cart215 = new Cart(0 , 0 , 6 , 0 , 0 , 3 , "White" , cart215);
+        bcart215.setBounds(1050,395,125,175);
+        add(bcart215);
+
         bcart24 = new JButton(cart24);
         Cart24 = new Cart(1 , 0 , 2 , 4 , 0 , 2 , "Blue" , cart24);
         bcart24.setBounds(1225,395,125,175);
         add(bcart24);
-
-        bcart25 = new JButton(cart25);
-        Cart25 = new Cart(0 , 0 , 5 , 0 , 3 , 2 , "Blue" , cart25);
-        bcart25.setBounds(700,395,125,175);
-        add(bcart25);
-
-        bcart26 = new JButton(cart26);
-        Cart26 = new Cart(0 , 0 , 0 , 0 , 6 , 3 , "Blue" , cart26);
-        bcart26.setBounds(875,395,125,175);
-        add(bcart26);
 
         bcart27 = new JButton(cart27);
         Cart27 = new Cart(0 , 0 , 4 , 1 , 2 , 2 , "Green" , cart27);
         bcart27.setBounds(1050,395,125,175);
         add(bcart27);
 
+        bcart26 = new JButton(cart26);
+        Cart26 = new Cart(0 , 0 , 0 , 0 , 6 , 3 , "Blue" , cart26);
+        bcart26.setBounds(875,395,125,175);
+        add(bcart26);
+
         bcart28 = new JButton(cart28);
         Cart28 = new Cart(0 , 5 , 0 , 0 , 0 , 2 , "Green" , cart28);
         bcart28.setBounds(1225,395,125,175);
         add(bcart28);
 
-        bcart29 = new JButton(cart29);
-        Cart29 = new Cart(0 , 6 , 0 , 0 , 0 , 3 , "Green" , cart29);
-        bcart29.setBounds(700,395,125,175);
-        add(bcart29);
-
-        bcart210 = new JButton(cart210);
-        Cart210 = new Cart(0 , 0 , 0 , 5 , 0 , 2 , "Red" , cart210);
-        bcart210.setBounds(875,395,125,175);
-        add(bcart210);
-
         bcart211 = new JButton(cart211);
         Cart211 = new Cart(0 , 2 , 1 , 0 , 4 , 2 , "Red" , cart211);
         bcart211.setBounds(1050,395,125,175);
         add(bcart211);
+
+        bcart29 = new JButton(cart29);
+        Cart29 = new Cart(0 , 6 , 0 , 0 , 0 , 3 , "Green" , cart29);
+        bcart29.setBounds(700,395,125,175);
+        add(bcart29);
 
         bcart212 = new JButton(cart212);
         Cart212 = new Cart(6 , 0 , 0 , 0 , 0 , 3 , "Red" , cart212);
@@ -415,25 +424,35 @@ public class MyFrame extends JFrame{
         bcart213.setBounds(700,395,125,175);
         add(bcart213);
 
-        bcart214 = new JButton(cart214);
-        Cart214 = new Cart(5 , 0 , 0 , 3 , 0 , 2 , "White" , cart214);
-        bcart214.setBounds(875,395,125,175);
-        add(bcart214);
+        bcart315 = new JButton(cart315);
+        Cart315 = new Cart(0 , 0 , 3 , 7 , 0 , 5 , "White" , cart315);
+        bcart315.setBounds(1050,195,125,175);
+        add(bcart315);
 
-        bcart215 = new JButton(cart215);
-        Cart215 = new Cart(0 , 0 , 6 , 0 , 0 , 3 , "White" , cart215);
-        bcart215.setBounds(1050,395,125,175);
-        add(bcart215);
+        bcart313 = new JButton(cart313);
+        Cart313 = new Cart(5 , 3 , 0 , 3 , 3 , 3 , "White" , cart313);
+        bcart313.setBounds(700,195,125,175);
+        add(bcart313);
 
         bcart31 = new JButton(cart31);
         Cart31 = new Cart(3 , 5 , 3 , 0 , 3 , 3 , "Black" , cart31);
         bcart31.setBounds(700,195,125,175);
         add(bcart31);
 
+        bcart36 = new JButton(cart36);
+        Cart36 = new Cart(0 , 0 , 7 , 0 , 3 , 5 , "Blue" , cart36);
+        bcart36.setBounds(875,195,125,175);
+        add(bcart36);
+
         bcart32 = new JButton(cart32);
         Cart32 = new Cart(7 , 0 , 0 , 0 , 0 , 4 , "Black" , cart32);
         bcart32.setBounds(875,195,125,175);
         add(bcart32);
+
+        bcart39 = new JButton(cart39);
+        Cart39 = new Cart(0 , 3 , 0 , 0 , 7 , 5 , "Green" , cart39);
+        bcart39.setBounds(700,195,125,175);
+        add(bcart39);
 
         bcart33 = new JButton(cart33);
         Cart33 = new Cart(7 , 0 , 0 , 3 , 0 , 5 , "Black" , cart33);
@@ -445,15 +464,15 @@ public class MyFrame extends JFrame{
         bcart34.setBounds(1225,195,125,175);
         add(bcart34);
 
+        bcart310 = new JButton(cart310);
+        Cart310 = new Cart(0 , 3 , 3 , 3 , 5 , 3 , "Red" , cart310);
+        bcart310.setBounds(875,195,125,175);
+        add(bcart310);
+
         bcart35 = new JButton(cart35);
         Cart35 = new Cart(0 , 0 , 7 , 0 , 0 , 4 , "Blue" , cart35);
         bcart35.setBounds(700,195,125,175);
         add(bcart35);
-
-        bcart36 = new JButton(cart36);
-        Cart36 = new Cart(0 , 0 , 7 , 0 , 3 , 5 , "Blue" , cart36);
-        bcart36.setBounds(875,195,125,175);
-        add(bcart36);
 
         bcart37 = new JButton(cart37);
         Cart37 = new Cart(3 , 0 , 5 , 3 , 3 , 3 , "Green" , cart37);
@@ -465,16 +484,6 @@ public class MyFrame extends JFrame{
         bcart38.setBounds(1225,195,125,175);
         add(bcart38);
 
-        bcart39 = new JButton(cart39);
-        Cart39 = new Cart(0 , 3 , 0 , 0 , 7 , 5 , "Green" , cart39);
-        bcart39.setBounds(700,195,125,175);
-        add(bcart39);
-
-        bcart310 = new JButton(cart310);
-        Cart310 = new Cart(0 , 3 , 3 , 3 , 5 , 3 , "Red" , cart310);
-        bcart310.setBounds(875,195,125,175);
-        add(bcart310);
-
         bcart311 = new JButton(cart311);
         Cart311 = new Cart(3 , 6 , 0 , 0 , 3 , 4 , "Red" , cart311);
         bcart311.setBounds(1050,195,125,175);
@@ -485,20 +494,10 @@ public class MyFrame extends JFrame{
         bcart312.setBounds(1225,195,125,175);
         add(bcart312);
 
-        bcart313 = new JButton(cart313);
-        Cart313 = new Cart(5 , 3 , 0 , 3 , 3 , 3 , "White" , cart313);
-        bcart313.setBounds(700,195,125,175);
-        add(bcart313);
-
         bcart314 = new JButton(cart314);
         Cart314 = new Cart(0 , 0 , 0 , 7 , 0 , 4 , "White" , cart314);
         bcart314.setBounds(875,195,125,175);
         add(bcart314);
-
-        bcart315 = new JButton(cart315);
-        Cart315 = new Cart(0 , 0 , 3 , 7 , 0 , 5 , "White" , cart315);
-        bcart315.setBounds(1050,195,125,175);
-        add(bcart315);
 
         lprize1 = new JLabel(prize1);
         prince1 = new Princes(0 , 0 , 4 , 0 , 4);
