@@ -8,6 +8,7 @@ public class CoinNewWindow{
     public int whitecoin , blackcoin , redcoin , bluecoin , greencoin;
     public JButton whitebutton , blackbutton , redbutton , bluebutton , greenbutton , submitbutton;
     public int whiteCount , blackCount , redCount , blueCount , greenCount;
+    public int maxcoin;
     public JLabel lwhiteCount , lblackCount , lredCount , lblueCount , lgreenCount;
 
     public CoinNewWindow(){
