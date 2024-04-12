@@ -78,6 +78,7 @@ public class Main{
         player1.GreenCoin -= cart.GreenCoin;
 
         player1.Score += cart.Score;
+        frame.changeScore1(player1.Score);
 
         switch (cart.SpecialCoin){
 
@@ -134,6 +135,7 @@ public class Main{
         player2.GreenCoin -= cart.GreenCoin;
 
         player2.Score += cart.Score;
+        frame.changeScore2(player2.Score);
 
         switch (cart.SpecialCoin){
 
@@ -172,9 +174,10 @@ public class Main{
         frame = new MyFrame();
         player1 = new Player();
         player2 = new Player();
-        newWindow = new CoinNewWindow();
 
         frame.newcoinwindow.addActionListener(e -> {
+
+            newWindow = new CoinNewWindow();
 
             newWindow.setcount(frame.WhiteCoin.CountCoin , frame.BlackCoin.CountCoin , frame.RedCoin.CountCoin , frame.BlueCoin.CountCoin , frame.GreenCoin.CountCoin );
 
@@ -184,36 +187,131 @@ public class Main{
 
             newWindow.whitebutton.addActionListener(e1 -> {
 
-                newWindow.whitecoin++;
-                newWindow.whitebutton.setEnabled(false);
+                if(frame.WhiteCoin.CountCoin == 4 || newWindow.whitecoin != 0){
+
+                    newWindow.whitecoin++;
+
+                    if(newWindow.whitecoin == 2){
+
+                        newWindow.whitebutton.setEnabled(false);
+                        newWindow.blackbutton.setEnabled(false);
+                        newWindow.redbutton.setEnabled(false);
+                        newWindow.bluebutton.setEnabled(false);
+                        newWindow.greenbutton.setEnabled(false);
+
+                    }
+
+                }
+                else{
+
+                    newWindow.whitecoin++;
+                    newWindow.whitebutton.setEnabled(false);
+
+                }
 
             });
 
             newWindow.blackbutton.addActionListener(e1 -> {
 
-                newWindow.blackcoin++;
-                newWindow.blackbutton.setEnabled(false);
+                if(frame.BlackCoin.CountCoin == 4 || newWindow.blackcoin != 0){
+
+                    newWindow.blackcoin++;
+
+                    if(newWindow.blackcoin == 2){
+
+                        newWindow.whitebutton.setEnabled(false);
+                        newWindow.blackbutton.setEnabled(false);
+                        newWindow.redbutton.setEnabled(false);
+                        newWindow.bluebutton.setEnabled(false);
+                        newWindow.greenbutton.setEnabled(false);
+
+                    }
+
+                }
+                else{
+
+                    newWindow.blackcoin++;
+                    newWindow.blackbutton.setEnabled(false);
+
+                }
 
             });
 
             newWindow.redbutton.addActionListener(e1 -> {
 
-                newWindow.redcoin++;
-                newWindow.redbutton.setEnabled(false);
+                if(frame.RedCoin.CountCoin == 4 || newWindow.redcoin != 0){
+
+                    newWindow.redcoin++;
+
+                    if(newWindow.redcoin == 2){
+
+                        newWindow.whitebutton.setEnabled(false);
+                        newWindow.blackbutton.setEnabled(false);
+                        newWindow.redbutton.setEnabled(false);
+                        newWindow.bluebutton.setEnabled(false);
+                        newWindow.greenbutton.setEnabled(false);
+
+                    }
+
+                }
+                else{
+
+                    newWindow.redcoin++;
+                    newWindow.redbutton.setEnabled(false);
+
+                }
 
             });
 
             newWindow.bluebutton.addActionListener(e1 -> {
 
-                newWindow.bluecoin++;
-                newWindow.bluebutton.setEnabled(false);
+                if(frame.BlueCoin.CountCoin == 4 || newWindow.bluecoin != 0){
+
+                    newWindow.bluecoin++;
+
+                    if(newWindow.bluecoin == 2){
+
+                        newWindow.whitebutton.setEnabled(false);
+                        newWindow.blackbutton.setEnabled(false);
+                        newWindow.redbutton.setEnabled(false);
+                        newWindow.bluebutton.setEnabled(false);
+                        newWindow.greenbutton.setEnabled(false);
+
+                    }
+
+                }
+                else{
+
+                    newWindow.bluecoin++;
+                    newWindow.bluebutton.setEnabled(false);
+
+                }
 
             });
 
             newWindow.greenbutton.addActionListener(e1 -> {
 
-                newWindow.greencoin++;
-                newWindow.greenbutton.setEnabled(false);
+                if(frame.GreenCoin.CountCoin == 4 || newWindow.greencoin != 0){
+
+                    newWindow.greencoin++;
+
+                    if(newWindow.greencoin == 2){
+
+                        newWindow.whitebutton.setEnabled(false);
+                        newWindow.blackbutton.setEnabled(false);
+                        newWindow.redbutton.setEnabled(false);
+                        newWindow.bluebutton.setEnabled(false);
+                        newWindow.greenbutton.setEnabled(false);
+
+                    }
+
+                }
+                else{
+
+                    newWindow.greencoin++;
+                    newWindow.greenbutton.setEnabled(false);
+
+                }
 
             });
 
@@ -226,46 +324,45 @@ public class Main{
                     if(newWindow.whitecoin != 0){
 
                         player1.WhiteCoin += newWindow.whitecoin;
+                        frame.WhiteCoin.CountCoin -= newWindow.whitecoin;
                         newWindow.whitecoin = 0;
-                        frame.WhiteCoin.CountCoin--;
 
                     }
 
                     if(newWindow.blackcoin != 0){
 
                         player1.BlackCoin += newWindow.blackcoin;
+                        frame.BlackCoin.CountCoin -= newWindow.blackcoin;
                         newWindow.blackcoin = 0;
-                        frame.BlackCoin.CountCoin--;
 
                     }
 
                     if(newWindow.redcoin != 0){
 
                         player1.RedCoin += newWindow.redcoin;
+                        frame.RedCoin.CountCoin -= newWindow.redcoin;
                         newWindow.redcoin = 0;
-                        frame.RedCoin.CountCoin--;
 
                     }
 
                     if(newWindow.bluecoin != 0){
 
                         player1.BlueCoin += newWindow.bluecoin;
+                        frame.BlueCoin.CountCoin -= newWindow.bluecoin;
                         newWindow.bluecoin = 0;
-                        frame.BlueCoin.CountCoin--;
 
                     }
 
                     if(newWindow.greencoin != 0){
 
                         player1.GreenCoin += newWindow.greencoin;
+                        frame.GreenCoin.CountCoin -= newWindow.greencoin;
                         newWindow.greencoin = 0;
-                        frame.GreenCoin.CountCoin--;
 
                     }
 
                     frame.changePlayerCoin1(player1.WhiteCoin , player1.BlackCoin , player1.RedCoin , player1.BlueCoin , player1.GreenCoin , player1.GoldenCoin);
 
-                    turnChanger();
 
                 }
                 else{
@@ -273,48 +370,49 @@ public class Main{
                     if(newWindow.whitecoin != 0){
 
                         player2.WhiteCoin += newWindow.whitecoin;
+                        frame.WhiteCoin.CountCoin -= newWindow.whitecoin;
                         newWindow.whitecoin = 0;
-                        frame.WhiteCoin.CountCoin--;
 
                     }
 
                     if(newWindow.blackcoin != 0){
 
                         player2.BlackCoin += newWindow.blackcoin;
+                        frame.BlackCoin.CountCoin -= newWindow.blackcoin;
                         newWindow.blackcoin = 0;
-                        frame.BlackCoin.CountCoin--;
 
                     }
 
                     if(newWindow.redcoin != 0){
 
                         player2.RedCoin += newWindow.redcoin;
+                        frame.RedCoin.CountCoin -= newWindow.redcoin;
                         newWindow.redcoin = 0;
-                        frame.RedCoin.CountCoin--;
 
                     }
 
                     if(newWindow.bluecoin != 0){
 
                         player2.BlueCoin += newWindow.bluecoin;
+                        frame.BlueCoin.CountCoin -= newWindow.bluecoin;
                         newWindow.bluecoin = 0;
-                        frame.BlueCoin.CountCoin--;
 
                     }
 
                     if(newWindow.greencoin != 0){
 
                         player2.GreenCoin += newWindow.greencoin;
+                        frame.GreenCoin.CountCoin -= newWindow.greencoin;
                         newWindow.greencoin = 0;
-                        frame.GreenCoin.CountCoin--;
 
                     }
 
                     frame.changePlayerCoin2(player2.WhiteCoin , player2.BlackCoin , player2.RedCoin , player2.BlueCoin , player2.GreenCoin , player2.GoldenCoin);
 
-                    turnChanger();
 
                 }
+
+                turnChanger();
 
             });
 
