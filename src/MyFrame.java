@@ -594,4 +594,16 @@ public class MyFrame extends JFrame{
 
     }
 
+    public void changeScore1(int score){
+
+        score1.setText(String.valueOf(score));
+
+    }
+
+    public void changeScore2(int score){
+
+        score2.setText(String.valueOf(score));
+
+    }
+
 }
