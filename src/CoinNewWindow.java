@@ -30,7 +30,7 @@ public class CoinNewWindow{
         coinwindow.setTitle("select coin");
         coinwindow.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
         coinwindow.setResizable(true);
-        coinwindow.setVisible(false);
+        coinwindow.setVisible(true);
 
         submitbutton = new JButton("submit");
         submitbutton.setBounds(200 , 100 , 100 , 50);
