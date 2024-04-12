@@ -33,7 +33,7 @@ public class CartNewWindow {
         buy = new JButton("Buy");
         buy.setBounds(150 , 60 , 60 , 20 );
         Cartwindow.add(buy);
-        buy.setVisible(false);
+        buy.setEnabled(false);
 
     }
 
