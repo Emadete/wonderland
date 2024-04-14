@@ -19,14 +19,15 @@ public class MyFrame extends JFrame{
     public JLabel whitelabel , blacklabel , redlabel , bluelabel , greenlabel;
     public JLabel pwhite1 , pblack1 , pred1 , pblue1 , pgreen1 , pgold1;
     public JLabel pwhiteCount1 , pblackCount1 , predCount1 , pblueCount1 , pgreenCount1 , pgoldCount1;
-    public JLabel spwhiteCount1 , spblackCount1 , spredCount1 , spblueCount1 , spgreenCount1 , spgoldCount1;
+    public JLabel spwhiteCount1 , spblackCount1 , spredCount1 , spblueCount1 , spgreenCount1;
     public JLabel pwhiteCount2 , pblackCount2 , predCount2 , pblueCount2 , pgreenCount2 , pgoldCount2;
-    public JLabel spwhiteCount2 , spblackCount2 , spredCount2 , spblueCount2 , spgreenCount2 , spgoldCount2;
+    public JLabel spwhiteCount2 , spblackCount2 , spredCount2 , spblueCount2 , spgreenCount2;
     public JLabel pwhite2 , pblack2 , pred2 , pblue2 , pgreen2 , pgold2;
     public Princes prince1 , prince2 , prince3;
     public JLabel lprize1 , lprize2 , lprize3 , goldenlabel;
     public JLabel player1 , name1 , score1 , star1;
     public JLabel player2 , name2 , score2 , star2;
+    public JButton spgoldCount1 , spgoldCount2;
     public JButton newcoinwindow;
 
     public MyFrame(){
@@ -128,8 +129,8 @@ public class MyFrame extends JFrame{
         spgreenCount1 = new JLabel("0");
         pgold1 = new JLabel(pgoldencoin);
         pgoldCount1 = new JLabel("0");
-        spgoldCount1 = new JLabel("0");
-        name1.setBounds(50 , 30 , 100 , 30);
+        spgoldCount1 = new JButton(playerlabel);
+        name1.setBounds(50 , 30 , 120 , 30);
         score1.setBounds(200 , 30 , 100 , 30);
         star1.setBounds(275 , 20 , 50 , 50);
         pwhite1.setBounds(35 , 80 , 50 , 50);
@@ -149,7 +150,7 @@ public class MyFrame extends JFrame{
         spredCount1.setBounds(167 , 165 , 50 , 30);
         spblueCount1.setBounds(224 , 165 , 50 , 30);
         spgreenCount1.setBounds(281 , 165 , 50 , 30);
-        spgoldCount1.setBounds(338 , 165 , 50 , 30);
+        spgoldCount1.setBounds(330 , 165 , 30 , 30);
         name1.setFont(new Font("Arial", Font.PLAIN, 20));
         score1.setFont(new Font("Arial", Font.PLAIN, 20));
         pwhiteCount1.setFont(new Font("Arial", Font.PLAIN, 20));
@@ -163,7 +164,6 @@ public class MyFrame extends JFrame{
         spredCount1.setFont(new Font("Arial", Font.PLAIN, 20));
         spblueCount1.setFont(new Font("Arial", Font.PLAIN, 20));
         spgreenCount1.setFont(new Font("Arial", Font.PLAIN, 20));
-        spgoldCount1.setFont(new Font("Arial", Font.PLAIN, 20));
         player1.setLayout(null);
         player1.setBounds(70 , 150 , 400 , 250);
         player1.add(name1);
@@ -211,8 +211,8 @@ public class MyFrame extends JFrame{
         spgreenCount2 = new JLabel("0");
         pgold2 = new JLabel(pgoldencoin);
         pgoldCount2 = new JLabel("0");
-        spgoldCount2 = new JLabel("0");
-        name2.setBounds(50 , 30 , 100 , 30);
+        spgoldCount2 = new JButton(playerlabel);
+        name2.setBounds(50 , 30 , 120 , 30);
         score2.setBounds(200 , 30 , 100 , 30);
         star2.setBounds(275 , 20 , 50 , 50);
         pwhite2.setBounds(35 , 80 , 50 , 50);
@@ -232,7 +232,7 @@ public class MyFrame extends JFrame{
         spredCount2.setBounds(167 , 165 , 50 , 30);
         spblueCount2.setBounds(224 , 165 , 50 , 30);
         spgreenCount2.setBounds(281 , 165 , 50 , 30);
-        spgoldCount2.setBounds(338 , 165 , 50 , 30);
+        spgoldCount2.setBounds(330 , 165 , 30 , 30);
         name2.setFont(new Font("Arial", Font.PLAIN, 20));
         score2.setFont(new Font("Arial", Font.PLAIN, 20));
         pwhiteCount2.setFont(new Font("Arial", Font.PLAIN, 20));
@@ -246,7 +246,6 @@ public class MyFrame extends JFrame{
         spredCount2.setFont(new Font("Arial", Font.PLAIN, 20));
         spblueCount2.setFont(new Font("Arial", Font.PLAIN, 20));
         spgreenCount2.setFont(new Font("Arial", Font.PLAIN, 20));
-        spgoldCount2.setFont(new Font("Arial", Font.PLAIN, 20));
         player2.setLayout(null);
         player2.setBounds(70 , 450 , 400 , 250);
         player2.add(name2);
@@ -610,6 +609,18 @@ public class MyFrame extends JFrame{
         this.name1.setText(name1);
 
         this.name2.setText(name2);
+
+    }
+
+    public void changegold1(int gold){
+
+        pgoldCount1.setText(String.valueOf(gold));
+
+    }
+
+    public void changegold2(int gold){
+
+        pgoldCount2.setText(String.valueOf(gold));
 
     }
 
