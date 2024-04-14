@@ -605,4 +605,12 @@ public class MyFrame extends JFrame{
 
     }
 
+    public void changePlayerName(String name1 , String name2){
+
+        this.name1.setText(name1);
+
+        this.name2.setText(name2);
+
+    }
+
 }
