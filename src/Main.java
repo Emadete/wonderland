@@ -1,8 +1,11 @@
+import javax.swing.*;
+
 public class Main{
 
     public static boolean turn = true;
     public static MyFrame frame;
     public static CoinNewWindow newWindow;
+    public static WinnerNewWindow winner;
     public static  Player player1 , player2;
     public static CartNewWindow bucart11 , bucart12 , bucart13 , bucart14 , bucart15 , bucart16 , bucart17 , bucart18;
     public static CartNewWindow bucart19 , bucart110 , bucart111 , bucart112 , bucart113 , bucart114 , bucart115;
@@ -38,46 +41,67 @@ public class Main{
         newWindow.bluebutton.setEnabled(true);
         newWindow.greenbutton.setEnabled(true);
 
-        if(frame.WhiteCoin.CountCoin == 0)
+        if(frame.WhiteCoin.CountCoin <= 0)
             newWindow.whitebutton.setEnabled(false);
 
-        if(frame.BlackCoin.CountCoin == 0)
+        if(frame.BlackCoin.CountCoin <= 0)
             newWindow.blackbutton.setEnabled(false);
 
-        if(frame.RedCoin.CountCoin == 0)
+        if(frame.RedCoin.CountCoin <= 0)
             newWindow.redbutton.setEnabled(false);
 
-        if(frame.BlueCoin.CountCoin == 0)
+        if(frame.BlueCoin.CountCoin <= 0)
             newWindow.bluebutton.setEnabled(false);
 
-        if(frame.GreenCoin.CountCoin == 0)
+        if(frame.GreenCoin.CountCoin <= 0)
             newWindow.greenbutton.setEnabled(false);
 
     }
 
     public static void CartBuy1(Cart cart){
 
-        cart.WhiteCoin -= player1.SpecialWhiteCoin;
-        frame.WhiteCoin.CountCoin += cart.WhiteCoin;
-        player1.WhiteCoin -= cart.WhiteCoin;
+        if(cart.WhiteCoin != 0){
 
-        cart.BlackCoin -= player1.SpecialBlackCoin;
-        frame.BlackCoin.CountCoin += cart.BlackCoin;
-        player1.BlackCoin -= cart.BlackCoin;
+            cart.WhiteCoin -= player1.SpecialWhiteCoin;
+            frame.WhiteCoin.CountCoin += cart.WhiteCoin;
+            player1.WhiteCoin -= cart.WhiteCoin;
 
-        cart.RedCoin -= player1.SpecialRedCoin;
-        frame.RedCoin.CountCoin += cart.RedCoin;
-        player1.RedCoin -= cart.RedCoin;
+        }
 
-        cart.BlueCoin -= player1.SpecialBlueCoin;
-        frame.BlueCoin.CountCoin += cart.BlueCoin;
-        player1.BlueCoin -= cart.BlueCoin;
+        if(cart.BlackCoin != 0){
 
-        cart.GreenCoin -= player1.SpecialGreenCoin;
-        frame.GreenCoin.CountCoin += cart.GreenCoin;
-        player1.GreenCoin -= cart.GreenCoin;
+            cart.BlackCoin -= player1.SpecialBlackCoin;
+            frame.BlackCoin.CountCoin += cart.BlackCoin;
+            player1.BlackCoin -= cart.BlackCoin;
+
+        }
+
+        if(cart.RedCoin != 0){
+
+            cart.RedCoin -= player1.SpecialRedCoin;
+            frame.RedCoin.CountCoin += cart.RedCoin;
+            player1.RedCoin -= cart.RedCoin;
+
+        }
+
+        if(cart.BlueCoin != 0){
+
+            cart.BlueCoin -= player1.SpecialBlueCoin;
+            frame.BlueCoin.CountCoin += cart.BlueCoin;
+            player1.BlueCoin -= cart.BlueCoin;
+
+        }
+
+        if(cart.GreenCoin != 0){
+
+            cart.GreenCoin -= player1.SpecialGreenCoin;
+            frame.GreenCoin.CountCoin += cart.GreenCoin;
+            player1.GreenCoin -= cart.GreenCoin;
+
+        }
 
         player1.Score += cart.Score;
+        checkwinner1();
 
         switch (cart.SpecialCoin){
 
@@ -119,27 +143,48 @@ public class Main{
 
     public static void CartBuy2(Cart cart){
 
-        cart.WhiteCoin -= player2.SpecialWhiteCoin;
-        frame.WhiteCoin.CountCoin += cart.WhiteCoin;
-        player2.WhiteCoin -= cart.WhiteCoin;
+        if(cart.WhiteCoin != 0){
 
-        cart.BlackCoin -= player2.SpecialBlackCoin;
-        frame.BlackCoin.CountCoin += cart.BlackCoin;
-        player2.BlackCoin -= cart.BlackCoin;
+            cart.WhiteCoin -= player2.SpecialWhiteCoin;
+            frame.WhiteCoin.CountCoin += cart.WhiteCoin;
+            player2.WhiteCoin -= cart.WhiteCoin;
 
-        cart.RedCoin -= player2.SpecialRedCoin;
-        frame.RedCoin.CountCoin += cart.RedCoin;
-        player2.RedCoin -= cart.RedCoin;
+        }
 
-        cart.BlueCoin -= player2.SpecialBlueCoin;
-        frame.BlueCoin.CountCoin += cart.BlueCoin;
-        player2.BlueCoin -= cart.BlueCoin;
+        if(cart.BlackCoin != 0){
 
-        cart.GreenCoin -= player2.SpecialGreenCoin;
-        frame.GreenCoin.CountCoin += cart.GreenCoin;
-        player2.GreenCoin -= cart.GreenCoin;
+            cart.BlackCoin -= player2.SpecialBlackCoin;
+            frame.BlackCoin.CountCoin += cart.BlackCoin;
+            player2.BlackCoin -= cart.BlackCoin;
+
+        }
+
+        if(cart.RedCoin != 0){
+
+            cart.RedCoin -= player2.SpecialRedCoin;
+            frame.RedCoin.CountCoin += cart.RedCoin;
+            player2.RedCoin -= cart.RedCoin;
+
+        }
+
+        if(cart.BlueCoin != 0){
+
+            cart.BlueCoin -= player2.SpecialBlueCoin;
+            frame.BlueCoin.CountCoin += cart.BlueCoin;
+            player2.BlueCoin -= cart.BlueCoin;
+
+        }
+
+        if(cart.GreenCoin != 0){
+
+            cart.GreenCoin -= player2.SpecialGreenCoin;
+            frame.GreenCoin.CountCoin += cart.GreenCoin;
+            player2.GreenCoin -= cart.GreenCoin;
+
+        }
 
         player2.Score += cart.Score;
+        checkwinner2();
 
         switch (cart.SpecialCoin){
 
@@ -181,7 +226,9 @@ public class Main{
 
     public static void prize11check(){
 
-        if(player1.SpecialWhiteCoin == frame.prince1.SpecialWhiteCoin && player1.SpecialBlackCoin == frame.prince1.SpecialBlackCoin && player1.SpecialRedCoin == frame.prince1.SpecialRedCoin &&  player1.SpecialBlueCoin == frame.prince1.SpecialBlueCoin &&  player1.SpecialGreenCoin == frame.prince1.SpecialGreenCoin){
+        if(player1.SpecialWhiteCoin >= frame.prince1.SpecialWhiteCoin && player1.SpecialBlackCoin >= frame.prince1.SpecialBlackCoin && player1.SpecialRedCoin >= frame.prince1.SpecialRedCoin &&  player1.SpecialBlueCoin >= frame.prince1.SpecialBlueCoin &&  player1.SpecialGreenCoin >= frame.prince1.SpecialGreenCoin){
+
+            checkwinner1();
 
             player1.Score += frame.prince1.Score;
 
@@ -192,7 +239,9 @@ public class Main{
     }
     public static void prize12check(){
 
-        if(player2.SpecialWhiteCoin == frame.prince1.SpecialWhiteCoin && player2.SpecialBlackCoin == frame.prince1.SpecialBlackCoin && player2.SpecialRedCoin == frame.prince1.SpecialRedCoin &&  player2.SpecialBlueCoin == frame.prince1.SpecialBlueCoin &&  player2.SpecialGreenCoin == frame.prince1.SpecialGreenCoin){
+        if(player2.SpecialWhiteCoin >= frame.prince1.SpecialWhiteCoin && player2.SpecialBlackCoin >= frame.prince1.SpecialBlackCoin && player2.SpecialRedCoin >= frame.prince1.SpecialRedCoin &&  player2.SpecialBlueCoin >= frame.prince1.SpecialBlueCoin &&  player2.SpecialGreenCoin >= frame.prince1.SpecialGreenCoin){
+
+            checkwinner2();
 
             player2.Score += frame.prince1.Score;
 
@@ -204,7 +253,9 @@ public class Main{
 
     public static void prize21check(){
 
-        if(player1.SpecialWhiteCoin == frame.prince2.SpecialWhiteCoin && player1.SpecialBlackCoin == frame.prince2.SpecialBlackCoin && player1.SpecialRedCoin == frame.prince2.SpecialRedCoin &&  player1.SpecialBlueCoin == frame.prince2.SpecialBlueCoin &&  player1.SpecialGreenCoin == frame.prince2.SpecialGreenCoin){
+        if(player1.SpecialWhiteCoin >= frame.prince2.SpecialWhiteCoin && player1.SpecialBlackCoin >= frame.prince2.SpecialBlackCoin && player1.SpecialRedCoin >= frame.prince2.SpecialRedCoin &&  player1.SpecialBlueCoin >= frame.prince2.SpecialBlueCoin &&  player1.SpecialGreenCoin >= frame.prince2.SpecialGreenCoin){
+
+            checkwinner1();
 
             player1.Score += frame.prince2.Score;
 
@@ -215,7 +266,9 @@ public class Main{
     }
     public static void prize22check(){
 
-        if(player2.SpecialWhiteCoin == frame.prince2.SpecialWhiteCoin && player2.SpecialBlackCoin == frame.prince2.SpecialBlackCoin && player2.SpecialRedCoin == frame.prince2.SpecialRedCoin &&  player2.SpecialBlueCoin == frame.prince2.SpecialBlueCoin &&  player2.SpecialGreenCoin == frame.prince2.SpecialGreenCoin){
+        if(player2.SpecialWhiteCoin >= frame.prince2.SpecialWhiteCoin && player2.SpecialBlackCoin >= frame.prince2.SpecialBlackCoin && player2.SpecialRedCoin >= frame.prince2.SpecialRedCoin &&  player2.SpecialBlueCoin >= frame.prince2.SpecialBlueCoin &&  player2.SpecialGreenCoin >= frame.prince2.SpecialGreenCoin){
+
+            checkwinner2();
 
             player2.Score += frame.prince2.Score;
 
@@ -227,7 +280,9 @@ public class Main{
 
     public static void prize31check(){
 
-        if(player1.SpecialWhiteCoin == frame.prince3.SpecialWhiteCoin && player1.SpecialBlackCoin == frame.prince3.SpecialBlackCoin && player1.SpecialRedCoin == frame.prince3.SpecialRedCoin &&  player1.SpecialBlueCoin == frame.prince3.SpecialBlueCoin &&  player1.SpecialGreenCoin == frame.prince3.SpecialGreenCoin){
+        if(player1.SpecialWhiteCoin >= frame.prince3.SpecialWhiteCoin && player1.SpecialBlackCoin >= frame.prince3.SpecialBlackCoin && player1.SpecialRedCoin >= frame.prince3.SpecialRedCoin &&  player1.SpecialBlueCoin >= frame.prince3.SpecialBlueCoin &&  player1.SpecialGreenCoin >= frame.prince3.SpecialGreenCoin){
+
+            checkwinner1();
 
             player1.Score += frame.prince3.Score;
 
@@ -238,7 +293,9 @@ public class Main{
     }
     public static void prize32check(){
 
-        if(player2.SpecialWhiteCoin == frame.prince3.SpecialWhiteCoin && player2.SpecialBlackCoin == frame.prince3.SpecialBlackCoin && player2.SpecialRedCoin == frame.prince3.SpecialRedCoin &&  player2.SpecialBlueCoin == frame.prince3.SpecialBlueCoin &&  player2.SpecialGreenCoin == frame.prince3.SpecialGreenCoin){
+        if(player2.SpecialWhiteCoin >= frame.prince3.SpecialWhiteCoin && player2.SpecialBlackCoin >= frame.prince3.SpecialBlackCoin && player2.SpecialRedCoin >= frame.prince3.SpecialRedCoin &&  player2.SpecialBlueCoin >= frame.prince3.SpecialBlueCoin &&  player2.SpecialGreenCoin >= frame.prince3.SpecialGreenCoin){
+
+            checkwinner2();
 
             player2.Score += frame.prince3.Score;
 
@@ -248,11 +305,38 @@ public class Main{
 
     }
 
+    public static void checkwinner1(){
+
+        if(player1.Score >= 15){
+
+            winner = new WinnerNewWindow(player1.Name);
+            frame.setVisible(false);
+
+        }
+
+    }
+
+    public static void checkwinner2(){
+
+        if(player2.Score >= 15){
+
+            winner = new WinnerNewWindow(player2.Name);
+            frame.setVisible(false);
+
+        }
+
+    }
+
     public static void main(String[] args) {
 
-        frame = new MyFrame();
         player1 = new Player();
         player2 = new Player();
+
+        player1.Name = JOptionPane.showInputDialog("player 1, Enter your name ?");
+        player2.Name = JOptionPane.showInputDialog("player 2, Enter your name ?");
+
+        frame = new MyFrame();
+        frame.changePlayerName(player1.Name , player2.Name);
 
         frame.newcoinwindow.addActionListener(e -> {
 
