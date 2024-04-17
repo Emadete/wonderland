@@ -67,6 +67,13 @@ public class Main{
             frame.WhiteCoin.CountCoin += cart.WhiteCoin;
             player1.WhiteCoin -= cart.WhiteCoin;
 
+            if(player1.WhiteCoin < 0){
+
+                player1.GoldenCoin += player1.WhiteCoin;
+                player1.WhiteCoin = 0;
+
+            }
+
         }
 
         if(cart.BlackCoin != 0){
@@ -74,6 +81,13 @@ public class Main{
             cart.BlackCoin -= player1.SpecialBlackCoin;
             frame.BlackCoin.CountCoin += cart.BlackCoin;
             player1.BlackCoin -= cart.BlackCoin;
+
+            if(player1.BlackCoin < 0){
+
+                player1.GoldenCoin += player1.BlackCoin;
+                player1.BlackCoin = 0;
+
+            }
 
         }
 
@@ -83,6 +97,13 @@ public class Main{
             frame.RedCoin.CountCoin += cart.RedCoin;
             player1.RedCoin -= cart.RedCoin;
 
+            if(player1.RedCoin < 0){
+
+                player1.GoldenCoin += player1.RedCoin;
+                player1.RedCoin = 0;
+
+            }
+
         }
 
         if(cart.BlueCoin != 0){
@@ -91,6 +112,13 @@ public class Main{
             frame.BlueCoin.CountCoin += cart.BlueCoin;
             player1.BlueCoin -= cart.BlueCoin;
 
+            if(player1.BlueCoin < 0){
+
+                player1.GoldenCoin += player1.BlueCoin;
+                player1.BlueCoin = 0;
+
+            }
+
         }
 
         if(cart.GreenCoin != 0){
@@ -98,6 +126,13 @@ public class Main{
             cart.GreenCoin -= player1.SpecialGreenCoin;
             frame.GreenCoin.CountCoin += cart.GreenCoin;
             player1.GreenCoin -= cart.GreenCoin;
+
+            if(player1.GreenCoin < 0){
+
+                player1.GoldenCoin += player1.GreenCoin;
+                player1.GreenCoin = 0;
+
+            }
 
         }
 
@@ -150,6 +185,13 @@ public class Main{
             frame.WhiteCoin.CountCoin += cart.WhiteCoin;
             player2.WhiteCoin -= cart.WhiteCoin;
 
+            if(player2.WhiteCoin < 0){
+
+                player2.GoldenCoin += player2.WhiteCoin;
+                player2.WhiteCoin = 0;
+
+            }
+
         }
 
         if(cart.BlackCoin != 0){
@@ -157,6 +199,13 @@ public class Main{
             cart.BlackCoin -= player2.SpecialBlackCoin;
             frame.BlackCoin.CountCoin += cart.BlackCoin;
             player2.BlackCoin -= cart.BlackCoin;
+
+            if(player2.BlackCoin < 0){
+
+                player2.GoldenCoin += player2.BlackCoin;
+                player2.BlackCoin = 0;
+
+            }
 
         }
 
@@ -166,6 +215,13 @@ public class Main{
             frame.RedCoin.CountCoin += cart.RedCoin;
             player2.RedCoin -= cart.RedCoin;
 
+            if(player2.RedCoin < 0){
+
+                player2.GoldenCoin += player2.RedCoin;
+                player2.RedCoin = 0;
+
+            }
+
         }
 
         if(cart.BlueCoin != 0){
@@ -174,6 +230,13 @@ public class Main{
             frame.BlueCoin.CountCoin += cart.BlueCoin;
             player2.BlueCoin -= cart.BlueCoin;
 
+            if(player2.BlueCoin < 0){
+
+                player2.GoldenCoin += player2.BlueCoin;
+                player2.BlueCoin = 0;
+
+            }
+
         }
 
         if(cart.GreenCoin != 0){
@@ -181,6 +244,13 @@ public class Main{
             cart.GreenCoin -= player2.SpecialGreenCoin;
             frame.GreenCoin.CountCoin += cart.GreenCoin;
             player2.GreenCoin -= cart.GreenCoin;
+
+            if(player2.GreenCoin < 0){
+
+                player2.GoldenCoin += player2.GreenCoin;
+                player2.GreenCoin = 0;
+
+            }
 
         }
 
@@ -820,7 +890,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart11.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart11.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart11.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart11.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart11.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart11.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart11.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart11.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart11.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart11.GreenCoin)
                     bucart11.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -862,7 +932,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart11.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart11.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart11.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart11.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart11.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart11.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart11.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart11.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart11.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart11.GreenCoin)
                     bucart11.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -911,7 +981,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart12.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart12.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart12.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart12.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart12.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart12.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart12.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart12.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart12.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart12.GreenCoin)
                     bucart12.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -953,7 +1023,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart12.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart12.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart12.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart12.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart12.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart12.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart12.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart12.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart12.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart12.GreenCoin)
                     bucart12.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -1002,7 +1072,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart13.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart13.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart13.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart13.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart13.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart13.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart13.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart13.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart13.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart13.GreenCoin)
                     bucart13.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -1044,7 +1114,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart13.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart13.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart13.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart13.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart13.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart13.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart13.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart13.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart13.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart13.GreenCoin)
                     bucart13.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -1093,7 +1163,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart14.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart14.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart14.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart14.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart14.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart14.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart14.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart14.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart14.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart14.GreenCoin)
                     bucart14.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -1135,7 +1205,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart14.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart14.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart14.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart14.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart14.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart14.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart14.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart14.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart14.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart14.GreenCoin)
                     bucart14.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -1184,7 +1254,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart15.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart15.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart15.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart15.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart15.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart15.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart15.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart15.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart15.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart15.GreenCoin)
                     bucart15.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -1226,7 +1296,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart15.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart15.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart15.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart15.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart15.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart15.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart15.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart15.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart15.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart15.GreenCoin)
                     bucart15.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -1275,7 +1345,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart16.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart16.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart16.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart16.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart16.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart16.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart16.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart16.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart16.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart16.GreenCoin)
                     bucart16.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -1317,7 +1387,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart16.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart16.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart16.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart16.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart16.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart16.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart16.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart16.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart16.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart16.GreenCoin)
                     bucart16.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -1366,7 +1436,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart17.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart17.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart17.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart17.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart17.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart17.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart17.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart17.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart17.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart17.GreenCoin)
                     bucart17.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -1408,7 +1478,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart17.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart17.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart17.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart17.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart17.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart17.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart17.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart17.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart17.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart17.GreenCoin)
                     bucart17.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -1457,7 +1527,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart18.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart18.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart18.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart18.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart18.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart18.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart18.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart18.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart18.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart18.GreenCoin)
                     bucart18.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -1499,7 +1569,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart18.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart18.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart18.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart18.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart18.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart18.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart18.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart18.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart18.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart18.GreenCoin)
                     bucart18.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -1548,7 +1618,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart19.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart19.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart19.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart19.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart19.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart19.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart19.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart19.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart19.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart19.GreenCoin)
                     bucart19.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -1590,7 +1660,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart19.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart19.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart19.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart19.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart19.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart19.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart19.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart19.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart19.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart19.GreenCoin)
                     bucart19.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -1639,7 +1709,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart110.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart110.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart110.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart110.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart110.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart110.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart110.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart110.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart110.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart110.GreenCoin)
                     bucart110.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -1681,7 +1751,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart110.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart110.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart110.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart110.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart110.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart110.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart110.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart110.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart110.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart110.GreenCoin)
                     bucart110.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -1730,7 +1800,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart111.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart111.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart111.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart111.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart111.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart111.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart111.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart111.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart111.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart111.GreenCoin)
                     bucart111.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -1772,7 +1842,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart111.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart111.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart111.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart111.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart111.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart111.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart111.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart111.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart111.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart111.GreenCoin)
                     bucart111.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -1821,7 +1891,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart112.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart112.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart112.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart112.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart112.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart112.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart112.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart112.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart112.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart112.GreenCoin)
                     bucart112.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -1863,7 +1933,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart112.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart112.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart112.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart112.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart112.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart112.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart112.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart112.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart112.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart112.GreenCoin)
                     bucart112.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -1912,7 +1982,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart113.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart113.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart113.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart113.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart113.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart113.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart113.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart113.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart113.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart113.GreenCoin)
                     bucart113.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -1954,7 +2024,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart113.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart113.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart113.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart113.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart113.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart113.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart113.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart113.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart113.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart113.GreenCoin)
                     bucart113.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -2003,7 +2073,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart114.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart114.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart114.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart114.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart114.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart114.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart114.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart114.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart114.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart114.GreenCoin)
                     bucart114.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -2045,7 +2115,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart114.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart114.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart114.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart114.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart114.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart114.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart114.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart114.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart114.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart114.GreenCoin)
                     bucart114.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -2094,7 +2164,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart115.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart115.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart115.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart115.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart115.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart115.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart115.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart115.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart115.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart115.GreenCoin)
                     bucart115.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -2136,7 +2206,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart115.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart115.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart115.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart115.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart115.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart115.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart115.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart115.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart115.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart115.GreenCoin)
                     bucart115.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -2185,7 +2255,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart21.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart21.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart21.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart21.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart21.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart21.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart21.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart21.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart21.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart21.GreenCoin)
                     bucart21.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -2227,7 +2297,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart21.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart21.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart21.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart21.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart21.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart21.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart21.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart21.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart21.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart21.GreenCoin)
                     bucart21.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -2276,7 +2346,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart22.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart22.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart22.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart22.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart22.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart22.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart22.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart22.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart22.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart22.GreenCoin)
                     bucart22.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -2318,7 +2388,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart22.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart22.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart22.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart22.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart22.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart22.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart22.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart22.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart22.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart22.GreenCoin)
                     bucart22.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -2367,7 +2437,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart23.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart23.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart23.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart23.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart23.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart23.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart23.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart23.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart23.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart23.GreenCoin)
                     bucart23.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -2409,7 +2479,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart23.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart23.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart23.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart23.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart23.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart23.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart23.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart23.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart23.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart23.GreenCoin)
                     bucart23.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -2458,7 +2528,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart24.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart24.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart24.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart24.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart24.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart24.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart24.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart24.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart24.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart24.GreenCoin)
                     bucart24.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -2500,7 +2570,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart24.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart24.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart24.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart24.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart24.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart24.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart24.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart24.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart24.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart24.GreenCoin)
                     bucart24.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -2549,7 +2619,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart25.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart25.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart25.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart25.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart25.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart25.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart25.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart25.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart25.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart25.GreenCoin)
                     bucart25.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -2591,7 +2661,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart25.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart25.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart25.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart25.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart25.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart25.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart25.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart25.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart25.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart25.GreenCoin)
                     bucart25.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -2640,7 +2710,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart26.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart26.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart26.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart26.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart26.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart26.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart26.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart26.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart26.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart26.GreenCoin)
                     bucart26.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -2682,7 +2752,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart26.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart26.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart26.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart26.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart26.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart26.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart26.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart26.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart26.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart26.GreenCoin)
                     bucart26.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -2731,7 +2801,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart27.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart27.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart27.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart27.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart27.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart27.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart27.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart27.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart27.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart27.GreenCoin)
                     bucart27.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -2773,7 +2843,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart27.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart27.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart27.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart27.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart27.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart27.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart27.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart27.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart27.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart27.GreenCoin)
                     bucart27.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -2822,7 +2892,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart28.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart28.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart28.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart28.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart28.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart28.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart28.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart28.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart28.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart28.GreenCoin)
                     bucart28.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -2864,7 +2934,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart28.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart28.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart28.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart28.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart28.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart28.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart28.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart28.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart28.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart28.GreenCoin)
                     bucart28.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -2913,7 +2983,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart29.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart29.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart29.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart29.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart29.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart29.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart29.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart29.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart29.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart29.GreenCoin)
                     bucart29.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -2955,7 +3025,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart29.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart29.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart29.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart29.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart29.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart29.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart29.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart29.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart29.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart29.GreenCoin)
                     bucart29.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -3004,7 +3074,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart210.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart210.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart210.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart210.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart210.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart210.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart210.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart210.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart210.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart210.GreenCoin)
                     bucart210.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -3046,7 +3116,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart210.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart210.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart210.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart210.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart210.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart210.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart210.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart210.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart210.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart210.GreenCoin)
                     bucart210.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -3095,7 +3165,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart211.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart211.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart211.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart211.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart211.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart211.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart211.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart211.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart211.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart211.GreenCoin)
                     bucart211.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -3137,7 +3207,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart211.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart211.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart211.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart211.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart211.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart211.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart211.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart211.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart211.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart211.GreenCoin)
                     bucart211.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -3186,7 +3256,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart212.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart212.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart212.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart212.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart212.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart212.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart212.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart212.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart212.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart212.GreenCoin)
                     bucart212.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -3228,7 +3298,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart212.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart212.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart212.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart212.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart212.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart212.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart212.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart212.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart212.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart212.GreenCoin)
                     bucart212.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -3277,7 +3347,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart213.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart213.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart213.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart213.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart213.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart213.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart213.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart213.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart213.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart213.GreenCoin)
                     bucart213.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -3319,7 +3389,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart213.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart213.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart213.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart213.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart213.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart213.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart213.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart213.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart213.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart213.GreenCoin)
                     bucart213.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -3368,7 +3438,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart214.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart214.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart214.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart214.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart214.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart214.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart214.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart214.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart214.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart214.GreenCoin)
                     bucart214.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -3410,7 +3480,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart214.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart214.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart214.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart214.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart214.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart214.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart214.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart214.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart214.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart214.GreenCoin)
                     bucart214.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -3459,7 +3529,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart215.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart215.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart215.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart215.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart215.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart215.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart215.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart215.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart215.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart215.GreenCoin)
                     bucart215.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -3501,7 +3571,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart215.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart215.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart215.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart215.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart215.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart215.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart215.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart215.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart215.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart215.GreenCoin)
                     bucart215.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -3550,7 +3620,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart31.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart31.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart31.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart31.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart31.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart31.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart31.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart31.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart31.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart31.GreenCoin)
                     bucart31.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -3592,7 +3662,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart31.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart31.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart31.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart31.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart31.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart31.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart31.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart31.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart31.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart31.GreenCoin)
                     bucart31.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -3641,7 +3711,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart32.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart32.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart32.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart32.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart32.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart32.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart32.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart32.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart32.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart32.GreenCoin)
                     bucart32.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -3683,7 +3753,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart32.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart32.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart32.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart32.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart32.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart32.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart32.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart32.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart32.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart32.GreenCoin)
                     bucart32.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -3732,7 +3802,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart33.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart33.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart33.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart33.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart33.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart33.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart33.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart33.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart33.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart33.GreenCoin)
                     bucart33.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -3774,7 +3844,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart33.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart33.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart33.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart33.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart33.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart33.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart33.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart33.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart33.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart33.GreenCoin)
                     bucart33.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -3823,7 +3893,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart34.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart34.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart34.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart34.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart34.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart34.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart34.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart34.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart34.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart34.GreenCoin)
                     bucart34.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -3865,7 +3935,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart34.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart34.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart34.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart34.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart34.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart34.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart34.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart34.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart34.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart34.GreenCoin)
                     bucart34.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -3914,7 +3984,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart35.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart35.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart35.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart35.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart35.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart35.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart35.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart35.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart35.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart35.GreenCoin)
                     bucart35.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -3956,7 +4026,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart35.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart35.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart35.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart35.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart35.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart35.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart35.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart35.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart35.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart35.GreenCoin)
                     bucart35.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -4005,7 +4075,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart36.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart36.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart36.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart36.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart36.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart36.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart36.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart36.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart36.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart36.GreenCoin)
                     bucart36.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -4047,7 +4117,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart36.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart36.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart36.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart36.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart36.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart36.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart36.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart36.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart36.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart36.GreenCoin)
                     bucart36.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -4096,7 +4166,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart37.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart37.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart37.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart37.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart37.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart37.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart37.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart37.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart37.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart37.GreenCoin)
                     bucart37.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -4138,7 +4208,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart37.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart37.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart37.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart37.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart37.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart37.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart37.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart37.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart37.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart37.GreenCoin)
                     bucart37.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -4187,7 +4257,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart38.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart38.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart38.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart38.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart38.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart38.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart38.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart38.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart38.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart38.GreenCoin)
                     bucart38.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -4229,7 +4299,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart38.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart38.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart38.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart38.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart38.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart38.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart38.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart38.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart38.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart38.GreenCoin)
                     bucart38.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -4278,7 +4348,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart39.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart39.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart39.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart39.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart39.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart39.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart39.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart39.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart39.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart39.GreenCoin)
                     bucart39.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -4320,7 +4390,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart39.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart39.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart39.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart39.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart39.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart39.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart39.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart39.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart39.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart39.GreenCoin)
                     bucart39.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -4369,7 +4439,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart310.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart310.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart310.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart310.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart310.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart310.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart310.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart310.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart310.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart310.GreenCoin)
                     bucart310.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -4411,7 +4481,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart310.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart310.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart310.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart310.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart310.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart310.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart310.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart310.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart310.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart310.GreenCoin)
                     bucart310.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -4460,7 +4530,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart311.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart311.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart311.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart311.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart311.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart311.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart311.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart311.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart311.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart311.GreenCoin)
                     bucart311.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -4502,7 +4572,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart311.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart311.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart311.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart311.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart311.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart311.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart311.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart311.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart311.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart311.GreenCoin)
                     bucart311.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -4551,7 +4621,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart312.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart312.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart312.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart312.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart312.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart312.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart312.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart312.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart312.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart312.GreenCoin)
                     bucart312.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -4593,7 +4663,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart312.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart312.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart312.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart312.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart312.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart312.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart312.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart312.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart312.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart312.GreenCoin)
                     bucart312.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -4642,7 +4712,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart313.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart313.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart313.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart313.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart313.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart313.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart313.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart313.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart313.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart313.GreenCoin)
                     bucart313.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -4684,7 +4754,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart313.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart313.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart313.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart313.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart313.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart313.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart313.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart313.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart313.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart313.GreenCoin)
                     bucart313.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -4733,7 +4803,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart314.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart314.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart314.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart314.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart314.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart314.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart314.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart314.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart314.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart314.GreenCoin)
                     bucart314.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -4775,7 +4845,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart314.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart314.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart314.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart314.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart314.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart314.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart314.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart314.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart314.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart314.GreenCoin)
                     bucart314.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
@@ -4824,7 +4894,7 @@ public class Main{
 
             if(turn){
 
-                if(player1.WhiteCoin + player1.SpecialWhiteCoin >= frame.Cart315.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin >= frame.Cart315.BlackCoin && player1.RedCoin + player1.SpecialRedCoin >= frame.Cart315.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin >= frame.Cart315.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin >= frame.Cart315.GreenCoin)
+                if(player1.WhiteCoin + player1.SpecialWhiteCoin + player1.GoldenCoin >= frame.Cart315.WhiteCoin && player1.BlackCoin + player1.SpecialBlackCoin + player1.GoldenCoin >= frame.Cart315.BlackCoin && player1.RedCoin + player1.SpecialRedCoin + player1.GoldenCoin >= frame.Cart315.RedCoin && player1.BlueCoin + player1.SpecialBlueCoin + player1.GoldenCoin >= frame.Cart315.BlueCoin && player1.GreenCoin + player1.SpecialGreenCoin + player1.GoldenCoin >= frame.Cart315.GreenCoin)
                     bucart315.buy.setEnabled(true);
 
                 if(player1.reserve > 3)
@@ -4866,7 +4936,7 @@ public class Main{
             }
             else{
 
-                if(player2.WhiteCoin + player2.SpecialWhiteCoin >= frame.Cart315.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin >= frame.Cart315.BlackCoin && player2.RedCoin + player2.SpecialRedCoin >= frame.Cart315.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin >= frame.Cart315.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin >= frame.Cart315.GreenCoin)
+                if(player2.WhiteCoin + player2.SpecialWhiteCoin + player2.GoldenCoin >= frame.Cart315.WhiteCoin && player2.BlackCoin + player2.SpecialBlackCoin + player2.GoldenCoin >= frame.Cart315.BlackCoin && player2.RedCoin + player2.SpecialRedCoin + player2.GoldenCoin >= frame.Cart315.RedCoin && player2.BlueCoin + player2.SpecialBlueCoin + player2.GoldenCoin >= frame.Cart315.BlueCoin && player2.GreenCoin + player2.SpecialGreenCoin + player2.GoldenCoin >= frame.Cart315.GreenCoin)
                     bucart315.buy.setEnabled(true);
 
                 if(player2.reserve > 3)
